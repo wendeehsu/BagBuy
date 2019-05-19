@@ -20,7 +20,7 @@ textarea {
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #efbfd3;
   text-shadow: none;
 }
 
@@ -216,7 +216,7 @@ body {
 }
 
 a {
-  color: #2a80b9;
+  color: #ef3780;
   text-decoration: none !important;
   -webkit-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
@@ -225,12 +225,12 @@ a {
   transition: all 200ms ease-in;
 }
 a:hover {
-  color: #e84c3d;
+  color: #c6a1b0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", Arial, sans-serif;
-  color: #2a3f52;
+  color: #ef3780;
   font-weight: 700;
 }
 
@@ -315,7 +315,7 @@ h6 {
   position: absolute;
   right: 47px;
   z-index: 6;
-  background-color: #2a80b9;
+  background-color: #2d3e50;
   padding: 0 20px;
   height: 54px;
   line-height: 54px;
@@ -335,8 +335,8 @@ h6 {
   margin: 0 15px;
   font-size: 16px;
 }
-.main-header .main-menu ul.menu li a:hover {
-  color: #bfddf0;
+.main-header .main-menu ul.menu li:hover {
+  background-color: #e86f9f;
 }
 .main-header .main-menu a.toggle-menu {
   float: right;
@@ -361,7 +361,7 @@ h6 {
 }
 
 .main-nav {
-  background-color: #2a80b9;
+  background-color: #ef3780;
   color: white;
 }
 .main-nav a {
@@ -370,18 +370,18 @@ h6 {
 .main-nav .list-menu ul li {
   display: inline-block;
   padding: 20px 30px;
-  border-left: 1px solid #3598db;
+  border-left: 0px solid #ffffff;
 }
 .main-nav .list-menu ul li:last-child {
-  border-right: 1px solid #3598db;
+  border-right: 0px solid #ffffff;
 }
 .main-nav .list-menu ul li a {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
 }
-.main-nav .list-menu ul li a:hover {
-  color: #dcecf7;
+.main-nav .list-menu ul li:hover {
+  background-color: #e86f9f;
 }
 .main-nav .notification {
   text-align: right;
@@ -393,7 +393,7 @@ h6 {
    ========================================================================== */
 .content-section {
   margin: 60px 0;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 0px solid #dddddd;
   padding-bottom: 60px;
 }
 
@@ -412,13 +412,13 @@ h6 {
   margin: 0;
 }
 .product-content h5 a {
-  color: #2a3f52;
+  color: #ef3780;
 }
 .product-content h5 a:hover {
   color: #e84c3d;
 }
 .product-content span {
-  color: #2a80b9;
+  color: #2d3e50;
   display: block;
 }
 .product-content span.price {
@@ -593,7 +593,8 @@ h6 {
 }
 .product-item .product-content {
   border: 0;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .product-item-vote {
@@ -658,7 +659,7 @@ h6 {
   margin: 20px 0;
 }
 .product-information .product-infos {
-  color: #2a80b9;
+  color: #ef3780;
   font-size: 18px;
   font-weight: 600;
   margin: 30px 0;
@@ -673,7 +674,7 @@ ul.product-buttons li {
 
 .main-btn {
   display: inline-block;
-  background-color: #2a80b9;
+  background-color: #ef3780;
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -715,7 +716,7 @@ textarea {
   outline: 0;
   padding: 12px;
   color: #fff;
-  background: #2a80b9;
+  background: #ef3780;
 }
 
 
@@ -745,7 +746,7 @@ textarea {
 }
 
 .our-partner {
-  background-color: #2a80b9;
+  background-color: #ef3780;
   padding: 15px;
   position: relative;
 }
@@ -792,7 +793,7 @@ ul.follow-us li {
   margin-bottom: 10px;
 }
 ul.follow-us li a {
-  background-color: #2a80b9;
+  background-color: #ef3780;
   color: white;
   text-transform: uppercase;
   font-weight: 700;
@@ -807,7 +808,7 @@ ul.follow-us li a i {
 
 .newsletter {
   padding: 20px;
-  background-color: #2a80b9;
+  background-color: #ef3780;
 }
 .newsletter p {
   margin: 0 0 20px 0;
@@ -837,7 +838,7 @@ ul.follow-us li a i {
 
 .bottom-footer {
   background-color: #2d3e50;
-  border-top: 1px solid #3598db;
+  border-top: 1px solid #ffffff;
   padding: 20px 0;
   font-size: 12px;
 }
@@ -868,7 +869,7 @@ ul.follow-us li a i {
   }
 
   .toggle-menu {
-    background-color: #2a80b9 !important;
+    background-color: #ef3780 !important;
   }
 
   .product-content .full-row {
@@ -913,7 +914,7 @@ ul.follow-us li a i {
   }
 
   .main-nav .list-menu {
-    border-bottom: 1px solid #3598db;
+    border-bottom: 0px solid #ffffff;
   }
   .main-nav .notification {
     padding: 20px 0;
