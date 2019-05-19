@@ -825,15 +825,20 @@ ul.follow-us li a i {
   padding: 0 10px;
   width: 64%;
 }
-.newsletter input[type=submit] {
-  width: auto;
+
+.darkBtn {
   background-color: #2d3e50;
   color: white;
-  padding: 0 25px;
+  padding: 10px 25px;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
   margin: 0;
+}
+
+.darkBtn:hover {
+  background-color: white;
+  color: #2d3e50;
 }
 
 .bottom-footer {
