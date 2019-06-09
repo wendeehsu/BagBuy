@@ -1,0 +1,11 @@
+.side-nav{
+	cursor:pointer;
+	width:250px;
+	align-self: center;
+	height: 50px;
+	padding: 0px 15px;
+}
+
+.side-nav:hover {
+	background-color: rgba(224, 192, 229, 0.3)
+}

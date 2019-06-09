@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>BagBuy</title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+    <link 
+    	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/Personal.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo-misc.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="top-header-left">
+                            <a href="#">Sign Up</a>
+                            <a href="#">Log In</a>
+                        </div> <!-- /.top-header-left -->
+                    </div> <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-dribbble"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div> <!-- /.social-icons -->
+                    </div> <!-- /.col-md-6 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.top-header -->
+        <div class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-8">
+                        <div class="logo">
+                            <h1 ><a href="index.html">BagBuy</a></h1>
+                        </div> <!-- /.logo -->
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-8 col-sm-6 col-xs-4">
+                        <div class="main-menu">
+                            <a href="#" class="toggle-menu">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <ul class="menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">Personal</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div> <!-- /.main-menu -->
+                    </div> <!-- /.col-md-8 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.main-header -->
+    </header> <!-- /.site-header -->
+
+    <div id="mainContext">
+    	<div id="dynamic-component-demo" class="demo">
+            <button
+                v-for="tab in tabs"
+                v-bind:key="tab"
+                v-bind:class="['tab-button', { active: currentTab === tab }]"
+                v-on:click="currentTab = tab">{{ tab }}</button>
+
+            <component
+                v-bind:is="currentTabComponent"
+                class="tab">
+                
+            </component>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">About Us</h3>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, debitis recusandae.
+                            <ul class="follow-us">
+                                <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                            </ul> <!-- /.follow-us -->
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">Why Choose Us?</h3>
+                            Kool Store is free responsive eCommerce template provided by templatemo website. You can use this layout for any website.
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">Report Problem</h3>
+                            <div class="newsletter">
+                                <form action="#" method="get">
+                                    <p>If you have any concern about our site, please do not hesitate to inform us</p>
+                                    <button class="darkBtn">Report</button>
+                                </form>
+                            </div> <!-- /.newsletter -->
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-4 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.main-footer -->
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.bottom-footer -->
+    </footer> <!-- /.site-footer -->
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
