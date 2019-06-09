@@ -9,7 +9,6 @@ function loadPage(page)
 	
 	if(script_name != prev_js && css_name != prev_css)
 	{
-		console.log(page + "Hello world!");
 		$('script[src="' + prev_js + '"]').remove();
 		$('link[href="' + prev_css + '"]').remove();
 		$(".container .main-content").empty();

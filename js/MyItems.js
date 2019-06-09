@@ -1,22 +1,44 @@
-Vue.component('tab-finding', { 
-	template: '<div>finding component</div>' 
-})
-Vue.component('tab-found', { 
-	template: '<div>found component</div>' 
-})
-Vue.component('tab-done', { 
-	template: '<div>Archive component</div>' 
+var main = new Vue({
+  el: '#mainContext',
+  data: {
+    chosen: "finding-section"
+  },
+  methods: {
+
+  }
 })
 
-new Vue({
-  el: '#dynamic-component-demo',
+var findingItems = new Vue({
+  el: '#finding-section',
   data: {
-    currentTab: 'finding',
-    tabs: ['finding', 'found', 'done']
+    list: []
   },
-  computed: {
-    currentTabComponent: function () {
-      return 'tab-' + this.currentTab.toLowerCase()
+  methods: {
+    GetList: function () {
+    	for(var i = 0; i < 3; i++)
+		{
+			var need1 = {
+				name:"鳳梨酥",
+				date:"2019-01-19",
+				interestNum:5
+			}
+			var need2 = {
+				name:"奶凍捲",
+				date:"2019-07-10",
+				interestNum:0
+			}
+			var need3 = {
+				name:"月餅",
+				date:"2019-12-30",
+				interestNum:1
+			}
+			this.list.push(need1);
+			this.list.push(need2);
+			this.list.push(need3);
+		}
     }
   }
 })
+
+findingItems.GetList();
+main.chosen = "finding-section";
