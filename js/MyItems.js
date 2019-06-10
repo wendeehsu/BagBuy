@@ -1,13 +1,3 @@
-var main = new Vue({
-  el: '#mainContext',
-  data: {
-    chosen: "finding-section"
-  },
-  methods: {
-
-  }
-})
-
 var findingItems = new Vue({
   el: '#finding-section',
   data: {
@@ -15,6 +5,7 @@ var findingItems = new Vue({
   },
   methods: {
     GetList: function () {
+    	console.log("get my items js");
     	for(var i = 0; i < 3; i++)
 		{
 			var need1 = {
@@ -38,7 +29,6 @@ var findingItems = new Vue({
 		}
     }
   }
-})
+});
 
 findingItems.GetList();
-main.chosen = "finding-section";

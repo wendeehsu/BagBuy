@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-</head>
 <body>
     <div id="mainContext">
     	<div id="dynamic-component-demo" class="demo">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active">
+                    <li class="breadcrumb-item">
                         <a href="#finding-section">找人中</a>
                     </li>
                     <li class="breadcrumb-item">
@@ -17,27 +16,149 @@
                 </ol>
             </nav>
         </div>
-        <div 
-            v-if="chosen == 'finding-section'"
-            id="finding-section" 
-            class="finding-items"  
+        <div id="finding-section"
             style="overflow-y: scroll;overflow-x: hidden; height:300px;">
-            <div class="row" v-for="i in list">
+            <div class="row finding-items" v-for="i in list">
                 <p class="item-Name" style="margin: 15px;">{{i.name}}</p>
                 <p class="date">Due date: {{i.date}}</p>
                 <p style="padding-left: 20px;">{{i.interestNum}} 人有興趣</p>
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
+
         <div
-            v-if="chosen == 'found-section'" 
             id="found-section">
             <p>section 2</p>
         </div>
         <div
-            v-if="chosen == 'done-section'"
             id="done-section">
             <p>section 3</p>
         </div>
+
+        <!-- choose buyer -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel" style="margin-top: 0px;">Interested buyers</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="overflow-y: scroll;overflow-x: hidden; height:400px;">
+                <div class="row" >
+                    <div class="col-md-4">
+                        <div class="product-image" style="margin-bottom: 10px;">
+                            <a href="#" onclick="window.open('profile.html', 'Yahoo', config='height=600,width=900');"><img src="images/Nichols_Kristin_gallery.jpg" style="border-radius:50%;"/></a>
+                        </div> <!-- /.product-image -->
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="product-thumb">
+                            <a href="#" onclick="window.open('profile.html', 'Yahoo', config='height=600,width=900');"><h3>Nichols Kristin</h3></a>  
+                            <figure>
+                                <figcaption class="ratings row">
+                                    <big><big><p style="margin: 0px 10px;">Ratings</p></big></big>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star-o"></span>
+                                    </a>
+                                    <a href="#">
+                                         <span class="fa fa-star-o"></span>
+                                    </a>
+                                    <button class="btn btn-outline-warning btn-sm" type="button" style="margin-left: 10px;height: 32px;padding: 0px 5px;" onclick="MsgBox()">Choose</button> 
+                                </figcaption>
+                            </figure>
+                            
+                            <script language="javascript">
+                                function MsgBox() 
+                                {
+                                    alert("Are you sure you want to pick this person?" );
+                                }　
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="product-image" style="margin-bottom: 10px;">
+                            <a href="#" onclick="window.open('profile.html', 'Yahoo', config='height=600,width=900');"><img src="images/Andrew-Vosko-600x600.jpg" style="border-radius:50%;"/></a>
+                        </div> <!-- /.product-image -->
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="product-thumb">
+                            <a href="#" onclick="window.open('profile.html', 'Yahoo', config='height=600,width=900');"><h3>Andrew Vosko</h3></a>  
+                            <figure>
+                                <figcaption class="ratings row">
+                                    <big><big><p style="margin: 0px 10px;">Ratings</p></big></big>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star-o"></span>
+                                    </a>
+                                    <a href="#">
+                                         <span class="fa fa-star-o"></span>
+                                    </a>
+                                    <button class="btn btn-outline-warning btn-sm" type="button" style="margin-left: 10px;height: 32px;padding: 0px 5px;" onclick="MsgBox()">Choose</button> 
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="product-image" style="margin-bottom: 10px;">
+                            <a href="#" onclick="window.open('profile.html', 'Yahoo', config='height=600,width=900');"><img src="images/Jian-Lian.jpg" style="border-radius:50%;"/></a>
+                        </div> <!-- /.product-image -->
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="product-thumb">
+                            <a href="#" onclick="window.open('profile.html', 'Yahoo', config='height=600,width=900');"><h3>Jian-Lian</h3></a>  
+                            <figure>
+                                <figcaption class="ratings row">
+                                    <big><big><p style="margin: 0px 10px;">Ratings</p></big></big>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star-o"></span>
+                                    </a>
+                                    <a href="#">
+                                         <span class="fa fa-star-o"></span>
+                                    </a>
+                                    <button class="btn btn-outline-warning btn-sm" type="button" style="margin-left: 10px;height: 32px;padding: 0px 5px;" onclick="MsgBox()">Choose</button> 
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="js/MyItems.js"></script>
+    <script src="js/vue.js"></script>
 </body>
 </html>
