@@ -19,10 +19,10 @@
         <div id="finding-section"
             style="overflow-y: scroll;overflow-x: hidden; height:300px;">
             <div class="row finding-items" v-for="i in list">
-                <p class="item-Name" style="margin: 15px;">{{i.name}}</p>
-                <p class="date">Due date: {{i.date}}</p>
-                <p style="padding-left: 20px;">{{i.interestNum}} 人有興趣</p>
-                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                <p class="item-Name col-md-3" style="margin: 15px;"><b>{{i.name}}</b></p>
+                <p class="date col-md-4">Due date: {{i.date}}</p>
+                <p class="col-md-3" style="padding-left: 20px;">{{i.interestNum}} 人有興趣</p>
+                <button type="button" class="btn col-md-1" data-toggle="modal" data-target="#exampleModal">
                   <i class="fa fa-eye" aria-hidden="true"></i>
                 </button>
             </div>
@@ -30,11 +30,11 @@
 
         <div
             id="found-section">
-            <p>section 2</p>
+            
         </div>
         <div
             id="done-section">
-            <p>section 3</p>
+            
         </div>
 
         <!-- choose buyer -->

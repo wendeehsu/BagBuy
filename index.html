@@ -22,7 +22,27 @@
     <link rel="stylesheet" href="css/templatemo-style.css">
 
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
+    <style>
+    .heart {
+      width: 20px;
+      height: 20px;
+      transform: translateZ(0);
+      color: #aaa;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      transition: all .3s ease;
+    }
+    .heart:hover {
+      animation: pulse .6s linear;
+    }
+    .heart:before {
+      content: "❤";
+      position: absolute;
+      color: #A12B2B;
+      opacity: 0;
+    }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -79,7 +99,8 @@
             <div class="row" style="margin: 0px;">
             	<h2 style="margin-top: 0px;padding: 0 10px;">Requirement List</h2>
             	<button 
-				type="button" 
+				type="button"
+                data-toggle="modal" data-target="#addProductModal"
 				style="height: 37px;width: 37px; padding: 0px; border-radius: 5rem;"
 				class="btn btn btn-outline-secondary">+</button>
                 <div class="col-sm-5">
@@ -95,10 +116,8 @@
             <div class="row" id="Needs" >
                 <div class="col-md-3 col-sm-6" v-for="need in needs">
                     <div class="product-item">
-                        <div class="product-thumb">
-                            <a href="product-detail.html">
-                                <img :src="'images/' + need.imgSrc" alt="">
-                            </a>
+                        <div class="product-thumb" data-toggle="modal" data-target="#detailProductModal">
+                            <img :src="'images/' + need.imgSrc" alt="">
                         </div> <!-- /.product-thum -->
                         <div class="product-content">
                             <h5> {{need.name}} </h5>
@@ -109,6 +128,91 @@
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /.content-section -->
+
+    <!-- add Product Modal -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title widget-title" style="margin-top: 0px;" id="addProductModalLabel">Request</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="overflow-y: scroll;overflow-x: hidden; height:400px;">
+            <div class="contact-form">
+                <form name="contactform" id="contactform" action="#" method="post">
+                    <p>
+                        <input name="name" type="text" id="name" placeholder="Your Name">
+                    </p>
+                    <p>
+                        <input name="subject" type="text" id="subject" placeholder="Picture">
+                    </p>
+                    <p>
+                        <input name="name" type="text" id="name" placeholder="Product Name"> 
+                    </p>
+                    <p>
+                        <input name="subject" type="text" id="subject" placeholder="Amount"> 
+                    </p>
+                    <p>
+                        <input name="subject" type="text" id="subject" placeholder="Price">
+                    </p>
+                    <p>
+                        <input name="subject" type="text" id="subject" placeholder="Location">
+                    </p>
+                    <p>
+                        <input name="subject" type="text" id="subject" placeholder="Due Date">
+                    </p>
+
+                    <p>
+                        <textarea name="message" id="message" placeholder="Message to the Seller"></textarea>    
+                    </p>
+                    <div>
+                        <input type="submit" class="mainBtn" id="submit" value="Finish Your Request">
+                    </div>
+                    <div>
+                        <input type="submit" class="cancelBtn" id="submit" value="Cancel">
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Product Modal -->
+    <div class="modal fade" id="detailProductModal" tabindex="-1" role="dialog" aria-labelledby="detailProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title widget-title" style="margin-top: 0px;" id="detailProductModalLabel">Demand Detail</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="overflow-y: scroll;overflow-x: hidden; height:400px;">
+            <div class="product-image">
+                <img src="images/cakeRoll.jpg" alt="">
+            </div> <!-- /.product-image -->
+            <div class="product-information">
+                <h2>諾貝爾奶凍卷</h2>
+                <p>交貨地址:<br>宜蘭縣礁溪鄉礁溪路四段68號(礁溪店)</p>
+                <p class="product-infos">
+                    <span><br><br>購買數量：1條<br><br>價錢: $150.00</span>
+                </p>
+                <ul class="product-buttons">
+                    <li>
+                        <a href="#" class="main-btn">我要代購</a>
+                    </li>
+                    <li>
+                        <a href="#" class="heart">❤ 5 people interested</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="site-footer">
         <div class="main-footer">

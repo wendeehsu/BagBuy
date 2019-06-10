@@ -719,6 +719,13 @@ textarea {
   background: #ef3780;
 }
 
+#contactform input.cancelBtn {
+  border: 0;
+  outline: 0;
+  padding: 12px;
+  color: #fff;
+  background: #bebebe;
+}
 
 
 /* ==========================================================================

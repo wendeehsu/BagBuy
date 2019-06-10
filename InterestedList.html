@@ -21,16 +21,26 @@
             </nav>
         </div>
         <div id="finding-section">
-            <div>
-                
+            <div id="finding-section"
+            style="overflow-y: scroll;overflow-x: hidden; height:300px;">
+                <div class="row finding-items" v-for="i in list">
+                    <p class="item-Name col-md-3" style="margin: 15px;"><b>{{i.name}}</b></p>
+                    <p class="date col-md-3">需求方: {{i.ppl}}</p>
+                    <p class="col-md-4" style="padding-left: 20px;">{{i.interestNum}} 人有興趣</p>
+                    <button type="button" class="btn col-md-1" data-toggle="modal" data-target="#exampleModal">
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
         </div>
         <div id="found-section">
-            <p>section 2</p>
+            
         </div>
         <div id="done-section">
-            <p>section 3</p>
+            
         </div>
     </div>
+    <script src="js/InterestedList.js"></script>
+    <script src="js/vue.js"></script>
 </body>
 </html>
