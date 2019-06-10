@@ -21,7 +21,7 @@ function loadPage(page)
 					$(window).scrollTop(0);
 				})
 				.fail(function(jqkhr, settings, exception){
-					alert("fail load script");
+					//alert("fail load script");
 				});
 		});
 
